@@ -8,21 +8,22 @@ import { createTRPCRouter, protectedProcedure, publicProcedure } from "../trpc";
 
 export const postRouter = createTRPCRouter({
   all: publicProcedure.query(({ ctx }) => {
-    return ctx.db.query.post.findMany({
-      with: { author: true },
-      orderBy: desc(schema.post.id),
-      limit: 10,
-    });
+    // return ctx.db.query.post.findMany({
+    //   with: { author: true },
+    //   orderBy: desc(schema.post.id),
+    //   limit: 10,
+    // });
+    return [] as any[]; // Placeholder for actual data
   }),
 
-  byId: publicProcedure
-    .input(z.object({ id: z.string() }))
-    .query(({ ctx, input }) => {
-      return ctx.db.query.post.findFirst({
-        with: { author: true },
-        where: eq(schema.post.id, input.id),
-      });
-    }),
+  // byId: publicProcedure
+  //   .input(z.object({ id: z.string() }))
+  //   .query(({ ctx, input }) => {
+  //     return ctx.db.query.post.findFirst({
+  //       with: { author: true },
+  //       where: eq(schema.post.id, input.id),
+  //     });
+  //   }),
 
   create: protectedProcedure
     .input(
@@ -40,47 +41,49 @@ export const postRouter = createTRPCRouter({
         return "[redacted]";
       }
 
-      const authorId = await ctx.db.query.profile
-        .findFirst({
-          where: eq(schema.profile.id, ctx.user.id),
-        })
-        .then(async (profile) => {
-          if (profile) return profile.id;
-          const [newProfile] = await ctx.db
-            .insert(schema.profile)
-            .values({
-              id: ctx.user.id,
-              name: getNameFromUser(),
-              image: ctx.user.user_metadata.avatar_url as string | undefined,
-              email: ctx.user.email,
-            })
-            .returning();
+      // const authorId = await ctx.db.query.profile
+      //   .findFirst({
+      //     where: eq(schema.profile.id, ctx.user.id),
+      //   })
+      //   .then(async (profile) => {
+      //     if (profile) return profile.id;
+      //     const [newProfile] = await ctx.db
+      //       .insert(schema.profile)
+      //       .values({
+      //         id: ctx.user.id,
+      //         name: getNameFromUser(),
+      //         image: ctx.user.user_metadata.avatar_url as string | undefined,
+      //         email: ctx.user.email,
+      //       })
+      //       .returning();
 
-          return newProfile!.id;
-        });
+      //     return newProfile!.id;
+      //   });
 
-      return ctx.db.insert(schema.post).values({
-        id: nanoid(),
-        authorId,
-        title: input.title,
-        content: input.content,
-      });
+      // return ctx.db.insert(schema.post).values({
+      //   id: nanoid(),
+      //   authorId,
+      //   title: input.title,
+      //   content: input.content,
+      // });
+      return null;
     }),
 
   delete: protectedProcedure
     .input(z.string())
     .mutation(async ({ ctx, input }) => {
-      const post = await ctx.db.query.post.findFirst({
-        where: eq(schema.post.id, input),
-      });
+      // const post = await ctx.db.query.post.findFirst({
+      //   where: eq(schema.post.id, input),
+      // });
 
-      if (post?.authorId !== ctx.user.id) {
-        throw new TRPCError({
-          code: "UNAUTHORIZED",
-          message: "Only the author is allowed to delete the post",
-        });
-      }
+      // if (post?.authorId !== ctx.user.id) {
+      //   throw new TRPCError({
+      //     code: "UNAUTHORIZED",
+      //     message: "Only the author is allowed to delete the post",
+      //   });
+      // }
 
-      return ctx.db.delete(schema.post).where(eq(schema.post.id, input));
+      // return ctx.db.delete(schema.post).where(eq(schema.post.id, input));
+      return null;
     }),
 });
