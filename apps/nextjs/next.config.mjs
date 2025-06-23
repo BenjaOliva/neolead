@@ -9,7 +9,34 @@ const config = {
 
   // Allow optimizing avatar images from GitHub
   images: {
-    domains: ["avatars.githubusercontent.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.dribbble.com",
+        pathname: "/**",
+      },
+    ],
+  },
+
+  // Redirects configuration
+  async redirects() {
+    return [
+      {
+        source: "/login",
+        destination: "/auth/signin",
+        permanent: true,
+      },
+      {
+        source: "/register",
+        destination: "/auth/signup",
+        permanent: true,
+      },
+    ];
   },
 
   /** We already do linting and typechecking as separate tasks in CI */
