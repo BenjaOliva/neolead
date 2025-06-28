@@ -1,6 +1,6 @@
 {
-  "name": "@acme/nextjs",
-  "version": "0.1.0",
+  "name": "@neolead/web",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "build": "pnpm with-env next build",
@@ -13,8 +13,8 @@
     "with-env": "dotenv -e ../../.env --"
   },
   "dependencies": {
-    "@acme/api": "workspace:^0.1.0",
-    "@acme/db": "workspace:^0.1.0",
+    "@neolead/api": "workspace:^0.1.0",
+    "@neolead/db": "workspace:^0.1.0",
     "@hookform/resolvers": "^5.1.1",
     "@radix-ui/react-accordion": "^1.2.11",
     "@radix-ui/react-avatar": "^1.1.10",
@@ -51,10 +51,10 @@
     "zod": "^3.25.67"
   },
   "devDependencies": {
-    "@acme/eslint-config": "workspace:^0.2.0",
-    "@acme/prettier-config": "workspace:^0.1.0",
-    "@acme/tailwind-config": "workspace:^0.1.0",
-    "@acme/tsconfig": "workspace:^0.1.0",
+    "@neolead/eslint-config": "workspace:^0.2.0",
+    "@neolead/prettier-config": "workspace:^0.1.0",
+    "@neolead/tailwind-config": "workspace:^0.1.0",
+    "@neolead/tsconfig": "workspace:^0.1.0",
     "@types/node": "^18.18.13",
     "@types/react": "^18.2.42",
     "@types/react-dom": "^18.2.17",
@@ -67,10 +67,10 @@
   "eslintConfig": {
     "root": true,
     "extends": [
-      "@acme/eslint-config/base",
-      "@acme/eslint-config/nextjs",
-      "@acme/eslint-config/react"
+      "@neolead/eslint-config/base",
+      "@neolead/eslint-config/nextjs",
+      "@neolead/eslint-config/react"
     ]
   },
-  "prettier": "@acme/prettier-config"
+  "prettier": "@neolead/prettier-config"
 }

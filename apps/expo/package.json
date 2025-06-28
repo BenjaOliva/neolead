@@ -1,6 +1,6 @@
 {
-  "name": "@acme/expo",
-  "version": "0.1.0",
+  "name": "@neolead/expo",
+  "version": "1.0.0",
   "private": true,
   "main": "expo-router/entry",
   "scripts": {
@@ -45,11 +45,11 @@
     "superjson": "2.2.1"
   },
   "devDependencies": {
-    "@acme/api": "workspace:^0.1.0",
-    "@acme/eslint-config": "workspace:^0.2.0",
-    "@acme/prettier-config": "workspace:^0.1.0",
-    "@acme/tailwind-config": "workspace:^0.1.0",
-    "@acme/tsconfig": "workspace:^0.1.0",
+    "@neolead/api": "workspace:^0.1.0",
+    "@neolead/eslint-config": "workspace:^0.2.0",
+    "@neolead/prettier-config": "workspace:^0.1.0",
+    "@neolead/tailwind-config": "workspace:^0.1.0",
+    "@neolead/tsconfig": "workspace:^0.1.0",
     "@babel/core": "^7.23.2",
     "@babel/preset-env": "^7.23.2",
     "@babel/runtime": "^7.23.2",
@@ -64,8 +64,8 @@
   "eslintConfig": {
     "root": true,
     "extends": [
-      "@acme/eslint-config/base",
-      "@acme/eslint-config/react"
+      "@neolead/eslint-config/base",
+      "@neolead/eslint-config/react"
     ],
     "ignorePatterns": [
       "expo-plugins/**"
@@ -74,5 +74,5 @@
       "jsx-a11y/alt-text": "off"
     }
   },
-  "prettier": "@acme/prettier-config"
+  "prettier": "@neolead/prettier-config"
 }

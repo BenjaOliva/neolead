@@ -8,7 +8,7 @@ importers:
 
   .:
     devDependencies:
-      '@acme/prettier-config':
+      '@neolead/prettier-config':
         specifier: workspace:^0.1.0
         version: link:tooling/prettier
       '@turbo/gen':
@@ -111,19 +111,19 @@ importers:
         specifier: 2.2.1
         version: 2.2.1
     devDependencies:
-      '@acme/api':
+      '@neolead/api':
         specifier: workspace:^0.1.0
         version: link:../../packages/api
-      '@acme/eslint-config':
+      '@neolead/eslint-config':
         specifier: workspace:^0.2.0
         version: link:../../tooling/eslint
-      '@acme/prettier-config':
+      '@neolead/prettier-config':
         specifier: workspace:^0.1.0
         version: link:../../tooling/prettier
-      '@acme/tailwind-config':
+      '@neolead/tailwind-config':
         specifier: workspace:^0.1.0
         version: link:../../tooling/tailwind
-      '@acme/tsconfig':
+      '@neolead/tsconfig':
         specifier: workspace:^0.1.0
         version: link:../../tooling/typescript
       '@babel/core':
@@ -159,10 +159,10 @@ importers:
 
   apps/nextjs:
     dependencies:
-      '@acme/api':
+      '@neolead/api':
         specifier: workspace:^0.1.0
         version: link:../../packages/api
-      '@acme/db':
+      '@neolead/db':
         specifier: workspace:^0.1.0
         version: link:../../packages/db
       '@hookform/resolvers':
@@ -268,16 +268,16 @@ importers:
         specifier: ^3.25.67
         version: 3.25.67
     devDependencies:
-      '@acme/eslint-config':
+      '@neolead/eslint-config':
         specifier: workspace:^0.2.0
         version: link:../../tooling/eslint
-      '@acme/prettier-config':
+      '@neolead/prettier-config':
         specifier: workspace:^0.1.0
         version: link:../../tooling/prettier
-      '@acme/tailwind-config':
+      '@neolead/tailwind-config':
         specifier: workspace:^0.1.0
         version: link:../../tooling/tailwind
-      '@acme/tsconfig':
+      '@neolead/tsconfig':
         specifier: workspace:^0.1.0
         version: link:../../tooling/typescript
       '@types/node':
@@ -307,7 +307,7 @@ importers:
 
   packages/api:
     dependencies:
-      '@acme/db':
+      '@neolead/db':
         specifier: workspace:^0.1.0
         version: link:../db
       '@supabase/supabase-js':
@@ -329,13 +329,13 @@ importers:
         specifier: ^3.25.67
         version: 3.25.67
     devDependencies:
-      '@acme/eslint-config':
+      '@neolead/eslint-config':
         specifier: workspace:^0.2.0
         version: link:../../tooling/eslint
-      '@acme/prettier-config':
+      '@neolead/prettier-config':
         specifier: workspace:^0.1.0
         version: link:../../tooling/prettier
-      '@acme/tsconfig':
+      '@neolead/tsconfig':
         specifier: workspace:^0.1.0
         version: link:../../tooling/typescript
       eslint:
@@ -357,13 +357,13 @@ importers:
         specifier: ^0.29.1
         version: 0.29.1(@vercel/postgres@0.5.1)
     devDependencies:
-      '@acme/eslint-config':
+      '@neolead/eslint-config':
         specifier: workspace:^0.2.0
         version: link:../../tooling/eslint
-      '@acme/prettier-config':
+      '@neolead/prettier-config':
         specifier: workspace:^0.1.0
         version: link:../../tooling/prettier
-      '@acme/tsconfig':
+      '@neolead/tsconfig':
         specifier: workspace:^0.1.0
         version: link:../../tooling/typescript
       dotenv-cli:
@@ -412,10 +412,10 @@ importers:
         specifier: ^4.6.0
         version: 4.6.0(eslint@8.55.0)
     devDependencies:
-      '@acme/prettier-config':
+      '@neolead/prettier-config':
         specifier: workspace:^0.1.0
         version: link:../prettier
-      '@acme/tsconfig':
+      '@neolead/tsconfig':
         specifier: workspace:^0.1.0
         version: link:../typescript
       '@types/eslint':
@@ -442,7 +442,7 @@ importers:
         specifier: ^0.5.9
         version: 0.5.9(@ianvs/prettier-plugin-sort-imports@4.1.1)(prettier@3.1.1)
     devDependencies:
-      '@acme/tsconfig':
+      '@neolead/tsconfig':
         specifier: workspace:^0.1.0
         version: link:../typescript
       typescript:
@@ -458,13 +458,13 @@ importers:
         specifier: 3.4.17
         version: 3.4.17
     devDependencies:
-      '@acme/eslint-config':
+      '@neolead/eslint-config':
         specifier: workspace:^0.2.0
         version: link:../eslint
-      '@acme/prettier-config':
+      '@neolead/prettier-config':
         specifier: workspace:^0.1.0
         version: link:../prettier
-      '@acme/tsconfig':
+      '@neolead/tsconfig':
         specifier: workspace:^0.1.0
         version: link:../typescript
       eslint:

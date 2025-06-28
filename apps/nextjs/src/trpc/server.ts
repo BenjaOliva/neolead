@@ -7,7 +7,7 @@ import { callProcedure } from "@trpc/server";
 import { observable } from "@trpc/server/observable";
 import SuperJSON from "superjson";
 
-import { appRouter, createTRPCContext } from "@acme/api";
+import { appRouter, createTRPCContext } from "@neolead/api";
 
 /**
  * This wraps the `createTRPCContext` helper and provides the required context for the tRPC API when

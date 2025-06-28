@@ -11,7 +11,7 @@ import { initTRPC, TRPCError } from "@trpc/server";
 import superjson from "superjson";
 import { ZodError } from "zod";
 
-import { db } from "@acme/db";
+import { db } from "@neolead/db";
 
 /**
  * 1. CONTEXT

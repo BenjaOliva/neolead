@@ -36,12 +36,12 @@ const data = {
   },
   teams: [
     {
-      name: "Acme Inc",
+      name: "Neolead Inc",
       logo: GalleryVerticalEnd,
       plan: "Enterprise",
     },
     {
-      name: "Acme Corp.",
+      name: "Neolead Corp.",
       logo: AudioWaveform,
       plan: "Startup",
     },
