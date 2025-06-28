@@ -13,9 +13,9 @@
     "with-env": "dotenv -e ../../.env --"
   },
   "dependencies": {
-    "@neolead/api": "workspace:^0.1.0",
-    "@neolead/db": "workspace:^0.1.0",
     "@hookform/resolvers": "^5.1.1",
+    "@neolead/api": "workspace:^1.0.0",
+    "@neolead/db": "workspace:^0.1.0",
     "@radix-ui/react-accordion": "^1.2.11",
     "@radix-ui/react-avatar": "^1.1.10",
     "@radix-ui/react-collapsible": "^1.1.11",
@@ -56,7 +56,7 @@
     "@neolead/tailwind-config": "workspace:^0.1.0",
     "@neolead/tsconfig": "workspace:^0.1.0",
     "@types/node": "^18.18.13",
-    "@types/react": "^18.2.42",
+    "@types/react": "^18.3.12",
     "@types/react-dom": "^18.2.17",
     "dotenv-cli": "^7.3.0",
     "eslint": "^8.53.0",

@@ -6,7 +6,13 @@ import { api } from "~/utils/api";
 export default function Post() {
   const { id } = useGlobalSearchParams();
   if (!id || typeof id !== "string") throw new Error("unreachable");
-  const { data: post } = api.post.byId.useQuery({ id });
+
+  // Mocked post 
+  const post = {
+    id,
+    title: `Post ${id}`,
+    content: `This is the content of post ${id}.`,
+  }
 
   if (!post) return null;
 
